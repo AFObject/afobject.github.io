@@ -1542,7 +1542,7 @@ a.feature-card:hover {
 .contact-copy h2 {
   margin: 1.3rem 0 4.5rem;
   font: 500 clamp(3.7rem, 9vw, 9.5rem)/0.9 var(--display);
-  letter-spacing: -0.08em;
+  letter-spacing: -0.06em;
 }
 
 .contact-copy h2 em {

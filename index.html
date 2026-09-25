@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yixuan Zhu — 上海交通大学计算机学院 Class of 2030。音乐、学习工具与生成式人工智能研究。"
+    />
+    <meta name="theme-color" content="#f1f0eb" />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("yz-theme-preference-v2");
+        const theme = stored || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#090a0c" : "#f1f0eb";
+      })();
+    </script>
+    <title>Yixuan Zhu — Selected Works</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090a0c'/%3E%3Cpath d='M15 18 31 40 49 16M23 48h19' fill='none' stroke='%23ff4f91' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">YZ</span>
+        <span class="brand-copy">Yixuan Zhu<br /><em>Portfolio · 2026</em></span>
+      </a>
+
+      <nav class="nav" aria-label="主要导航">
+        <a href="#projects">PROJECTS</a>
+        <a href="#research">RESEARCH</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="切换为浅色模式" aria-pressed="true">
+        <span class="theme-icon" aria-hidden="true">
+          <svg class="moon" viewBox="0 0 24 24">
+            <path d="M20.1 15.2A8.7 8.7 0 0 1 8.8 3.9 8.7 8.7 0 1 0 20.1 15.2Z" />
+          </svg>
+          <svg class="sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+        </span>
+        <span class="theme-label">Dark</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="signal-stage" aria-hidden="true">
+          <svg viewBox="0 0 1440 420" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="signal-gradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ffd84a" />
+                <stop offset="52%" stop-color="#ff4f91" />
+                <stop offset="100%" stop-color="#9a65ff" />
+              </linearGradient>
+            </defs>
+            <g class="staff-lines">
+              <path d="M-40 152H1480" />
+              <path d="M-40 182H1480" />
+              <path d="M-40 212H1480" />
+              <path d="M-40 242H1480" />
+              <path d="M-40 272H1480" />
+            </g>
+            <path
+              class="signal-path signal-shadow"
+              d="M-50 213 C80 213,94 213,150 213 S230 100,294 211 S382 213,438 213 S517 330,578 213 S666 212,730 212 S786 145,842 213 S918 213,985 213 S1040 70,1116 213 S1230 213,1490 213"
+            />
+            <path
+              class="signal-path signal-main"
+              d="M-50 213 C80 213,94 213,150 213 S230 100,294 211 S382 213,438 213 S517 330,578 213 S666 212,730 212 S786 145,842 213 S918 213,985 213 S1040 70,1116 213 S1230 213,1490 213"
+            />
+          </svg>
+        </div>
+
+        <div class="hero-copy">
+          <div class="eyebrow" data-reveal>
+            <span class="pulse-dot"></span>
+            Computer Science · Music · Tools
+          </div>
+          <h1 id="hero-title" data-reveal>
+            <span class="hero-first">Yixuan</span>
+            <span class="hero-last">Zhu<span class="accent-dot">.</span></span>
+          </h1>
+          <div class="hero-bottom" data-reveal>
+            <p class="hero-statement">
+              I build instruments for<br />
+              <span class="word-rotator" aria-live="polite">music.</span>
+            </p>
+            <div class="hero-meta">
+              <p>上海交通大学<br />计算机学院 · Class of 2030</p>
+              <div class="hero-actions">
+                <a class="action-pill action-primary" href="#projects">
+                  Explore Work
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 8 5 5 5-5" /></svg>
+                </a>
+                <a class="action-pill" href="mailto:yixuanzhu@sjtu.edu.cn">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-mark" aria-hidden="true">
+          <span>SCROLL TO EXPLORE</span>
+          <i></i>
+        </div>
+      </section>
+
+      <section class="projects-showcase" id="projects" aria-labelledby="projects-title">
+        <div class="horizontal-runner">
+          <div class="horizontal-sticky">
+            <div class="horizontal-top">
+              <div>
+                <span class="section-index">01 / PROJECTS</span>
+                <h2 id="projects-title">Selected Works</h2>
+              </div>
+              <div class="horizontal-guide">
+                <span>SCROLL TO MOVE</span>
+                <div class="horizontal-progress"><i></i></div>
+                <strong><b>01</b> / 10</strong>
+              </div>
+            </div>
+
+            <div class="feature-track">
+              <a
+                class="feature-card h-project-card degree-card"
+                href="https://github.com/AFObject/DegreeNote"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="打开 DegreeNote GitHub 仓库"
+              >
+                <div class="feature-topline">
+                  <span class="project-number">2026 · FEATURED</span>
+                  <span class="status status-live"><i></i> PUBLIC ↗</span>
+                </div>
+                <div class="project-visual sequencer" aria-hidden="true">
+                  <div class="transport"><span>01:24:08</span><span>♩ 120 BPM</span></div>
+                  <div class="tracks">
+                    <div class="track-name">MELODY</div>
+                    <div class="track-row melody-row"><i style="--x:4%;--w:12%"></i><i style="--x:19%;--w:7%"></i><i style="--x:30%;--w:15%"></i><i style="--x:52%;--w:8%"></i><i style="--x:66%;--w:18%"></i></div>
+                    <div class="track-name">CHORDS</div>
+                    <div class="track-row chord-row"><i style="--x:2%;--w:22%"></i><i style="--x:27%;--w:22%"></i><i style="--x:52%;--w:22%"></i><i style="--x:77%;--w:20%"></i></div>
+                    <div class="track-name">RHYTHM</div>
+                    <div class="track-row rhythm-row"><span></span></div>
+                  </div>
+                  <div class="playhead"></div>
+                </div>
+                <div class="feature-content">
+                  <div><h3>DegreeNote</h3><p>A creative workspace for pop-music demos and automatic accompaniment.</p></div>
+                  <span class="feature-tag">MUSIC CREATION</span>
+                </div>
+              </a>
+
+              <a class="feature-card h-project-card math-card" href="https://github.com/AFObject/MathPaper" target="_blank" rel="noreferrer" aria-label="打开 MathPaper GitHub 仓库">
+                <div class="feature-topline"><span class="project-number">2025 · FEATURED</span><span class="status">PUBLIC ↗</span></div>
+                <div class="project-visual paper-scene" aria-hidden="true">
+                  <div class="paper-sheet paper-back"></div>
+                  <div class="paper-sheet paper-front">
+                    <div class="paper-header">
+                      <span class="paper-title">2050 年上海市普通高校冬季招生统一文化考试<br /><b>数学试卷</b></span>
+                    </div>
+                    <div class="math-question math-question-long math-question-short">
+                      <b>1.</b>
+                      <span>欧拉公式的提出者是______。</span>
+                    </div>
+                    <div class="math-question math-question-long math-question-short">
+                      <b>2.</b>
+                      <span>上海高中数学共有选择性必修______册。（精确到 <i>0.01</i>）</span>
+                    </div>
+                    <div class="math-question math-question-long">
+                      <b>11.</b>
+                      <span>已知抛物线 <i>Γ: y² = 2px (p &gt; 0)</i>，对 Γ 上的任意一点 P，在 Γ 上均存在两点 A、B（与 P 不重合），使得 △ABP 为等边三角形，则 Γ 离心率的取值范围为______。</span>
+                    </div>
+                    <div class="math-question math-question-long">
+                      <b>12.</b>
+                      <span>已知 <i><span class="vec">a</span>、<span class="vec">b</span>、<span class="vec">c</span></i> 为平面内的单位向量，若对任意 <i><span class="vec">a</span>、<span class="vec">b</span></i>，均存在 <i><span class="vec">c</span></i> 使 <i><span class="vec">a</span> · <span class="vec">c</span></i> 与 <i><span class="vec">b</span> · <span class="vec">c</span></i> 均小于 ½，则 <i>|<span class="vec">a</span>| + |<span class="vec">b</span>|</i> 的最小值为______。</span>
+                    </div>
+                  </div>
+                  <div class="katex-badge">KaTeX</div>
+                </div>
+                <div class="feature-content">
+                  <div><h3>MathPaper</h3><p>A browser-based exam typesetting system powered by HTML and KaTeX.</p></div>
+                  <span class="feature-tag">TYPESETTING</span>
+                </div>
+              </a>
+
+              <a class="feature-card h-project-card ringtone-card" href="https://github.com/AFObject/RingtoneHY" target="_blank" rel="noreferrer" aria-label="打开 RingtoneHY GitHub 仓库">
+                <div class="feature-topline"><span class="project-number">2022 · FEATURED</span><span class="status">PUBLIC · ARCHIVED ↗</span></div>
+                <div class="project-visual call-scene" aria-hidden="true">
+                  <div class="ring ring-one"></div><div class="ring ring-two"></div><div class="ring ring-three"></div>
+                  <div class="call-window">
+                    <div class="window-bar"><i></i><i></i><i></i></div><div class="caller-icon">HY</div><strong>Online Class</strong><span>Incoming call…</span><div class="call-actions"><i>×</i><i>✓</i></div>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <div><h3>RingtoneHY</h3><p>A customizable macOS ringtone system created for online classes.</p></div>
+                  <span class="feature-tag">macOS · SWIFT</span>
+                </div>
+              </a>
+
+              <a class="feature-card h-project-card ide-card" href="https://github.com/AFObject/Cppp-IDE" target="_blank" rel="noreferrer" aria-label="打开 Cppp-IDE GitHub 仓库">
+                <div class="feature-topline"><span class="project-number">2020 · FEATURED</span><span class="status">PUBLIC · ARCHIVED ↗</span></div>
+                <div class="project-visual editor-scene" aria-hidden="true">
+                  <div class="editor-tabs"><span>main.cpp</span><span>input.txt</span></div>
+                  <div class="editor-body"><div class="line-nums">1<br />2<br />3<br />4<br />5<br />6<br />7</div><pre><span class="code-blue">#include</span> <span class="code-green">&lt;iostream&gt;</span>
+
+<span class="code-pink">int</span> <span class="code-yellow">main</span>() {
+  std::cout <span class="code-pink">&lt;&lt;</span> <span class="code-green">"hello"</span>;
+  <span class="code-blue">return</span> <span class="code-orange">0</span>;
+}</pre></div>
+                  <div class="editor-status"><span>✓ Build succeeded</span><span>C++ · UTF-8</span></div>
+                </div>
+                <div class="feature-content">
+                  <div><h3>Cppp-IDE</h3><p>A lightweight C++ IDE for competitive programming on macOS.</p></div>
+                  <span class="feature-tag">macOS · SWIFT</span>
+                </div>
+              </a>
+
+              <div class="minor-track-grid">
+              <a class="mini-project-card track-mini-card" href="https://github.com/AFObject/Chorder" target="_blank" rel="noreferrer">
+                <div class="mini-visual chorder-mini" aria-hidden="true"><div class="mini-staff"><i></i><i></i><i></i><i></i><i></i><b>●</b><b>●</b><b>●</b></div><div class="piano-keys"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                <div class="mini-card-copy"><span>2026 · MIDI · MUSIC</span><h3>Chorder</h3><p>Connects to MIDI devices and renders chords and notation in real time.</p><i>↗</i></div>
+              </a>
+              <a class="mini-project-card track-mini-card" href="https://github.com/AFObject/cizhou" target="_blank" rel="noreferrer">
+                <div class="mini-visual cizhou-mini" aria-hidden="true"><div class="word-card"><small>616 / 实词</small><strong>乘</strong><span>登 · 趁着 · 冒着</span></div><div class="word-card"><strong>固</strong></div><div class="word-card"><strong>顾</strong></div></div>
+                <div class="mini-card-copy"><span>2026 · WEB · LANGUAGE</span><h3>cizhou</h3><p>A focused web tool for mastering 616 essential Classical Chinese words.</p><i>↗</i></div>
+              </a>
+              <a class="mini-project-card track-mini-card" href="https://github.com/AFObject/Sheeter" target="_blank" rel="noreferrer">
+                <div class="mini-visual sheeter-mini" aria-hidden="true"><div class="answer-paper"><strong>答题卡</strong><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+                <div class="mini-card-copy"><span>2026 · WEB · PRINT</span><h3>Sheeter</h3><p>A fast, minimal answer-sheet generator for high-school examinations.</p><i>↗</i></div>
+              </a>
+              <a class="mini-project-card track-mini-card" href="https://github.com/AFObject/Reciter" target="_blank" rel="noreferrer">
+                <div class="mini-visual reciter-mini" aria-hidden="true"><div class="poem"><small>蜀道难 · 李白</small><p>噫吁嚱，危乎高哉！<br /><mark>蜀道之难，难于上青天。</mark><br />蚕丛及鱼凫，开国何茫然。</p></div></div>
+                <div class="mini-card-copy"><span>2026 · WEB · LANGUAGE</span><h3>Reciter</h3><p>Focused recitation and dictation practice for Chinese literature.</p><i>↗</i></div>
+              </a>
+              <a class="mini-project-card track-mini-card" href="https://github.com/AFObject/PinHaoZi" target="_blank" rel="noreferrer">
+                <div class="mini-visual pinhaozi-mini" aria-hidden="true"><div class="writing-grid"></div><strong>会者不难</strong><span>GENERATING STROKES ···</span></div>
+                <div class="mini-card-copy"><span>2025 · HTML · TOOL</span><h3>PinHaoZi</h3><p>A handwriting-assistance tool for Chinese-language assignments.</p><i>↗</i></div>
+              </a>
+              <a class="mini-project-card track-mini-card" href="https://github.com/AFObject/Annotext" target="_blank" rel="noreferrer">
+                <div class="mini-visual annotext-mini" aria-hidden="true"><div class="classic-text">先帝创业未半<br />而中道<mark>崩殂</mark><br />今天下三分<br />益州疲弊</div><span class="annotation a-one">崩殂：帝王去世</span></div>
+                <div class="mini-card-copy"><span>2025 · WEB · LANGUAGE</span><h3>Annotext</h3><p>Interactive annotation and recall practice for Classical Chinese texts.</p><i>↗</i></div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section selected-section" id="legacy-selected" aria-labelledby="selected-title" hidden>
+        <div class="section-heading" data-reveal>
+          <div>
+            <span class="section-index">01 / SELECTED WORKS</span>
+            <h2 id="selected-title">代表性项目</h2>
+          </div>
+          <p>四种尺度，同一种创作冲动：<br />把复杂的事情做成自然的工具。</p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="feature-card degree-card" data-reveal>
+            <div class="feature-topline">
+              <span class="project-number">A / 04</span>
+              <span class="status status-live"><i></i> PUBLIC</span>
+            </div>
+            <div class="project-visual sequencer" aria-hidden="true">
+              <div class="transport">
+                <span class="transport-time">01:24:08</span>
+                <span class="transport-bpm">♩ 120 BPM</span>
+              </div>
+              <div class="tracks">
+                <div class="track-name">MELODY</div>
+                <div class="track-row melody-row">
+                  <i style="--x: 4%; --w: 12%"></i><i style="--x: 19%; --w: 7%"></i><i style="--x: 30%; --w: 15%"></i><i style="--x: 52%; --w: 8%"></i><i style="--x: 66%; --w: 18%"></i>
+                </div>
+                <div class="track-name">CHORDS</div>
+                <div class="track-row chord-row">
+                  <i style="--x: 2%; --w: 22%"></i><i style="--x: 27%; --w: 22%"></i><i style="--x: 52%; --w: 22%"></i><i style="--x: 77%; --w: 20%"></i>
+                </div>
+                <div class="track-name">RHYTHM</div>
+                <div class="track-row rhythm-row"><span></span></div>
+              </div>
+              <div class="playhead"></div>
+            </div>
+            <div class="feature-content">
+              <div>
+                <h3>DegreeNote</h3>
+                <p>流行音乐 Demo 与自动伴奏创作工具</p>
+              </div>
+              <span class="feature-tag">MUSIC CREATION</span>
+            </div>
+          </article>
+
+          <a
+            class="feature-card math-card"
+            href="https://github.com/AFObject/MathPaper"
+            target="_blank"
+            rel="noreferrer"
+            data-reveal
+            aria-label="打开 MathPaper GitHub 仓库"
+          >
+            <div class="feature-topline">
+              <span class="project-number">B / 04</span>
+              <span class="status">PUBLIC ↗</span>
+            </div>
+            <div class="project-visual paper-scene" aria-hidden="true">
+              <div class="paper-sheet paper-back"></div>
+              <div class="paper-sheet paper-front">
+                <div class="paper-header">
+                  <span>2026 年普通高等学校招生全国统一考试</span>
+                  <strong>数 学</strong>
+                </div>
+                <div class="math-question">
+                  <b>1.</b><span>已知函数&nbsp; f(x) = x³ − 3x + 1，则</span>
+                  <div class="formula">f′(x) = 3x² − 3</div>
+                </div>
+                <div class="math-lines"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="katex-badge">KaTeX</div>
+            </div>
+            <div class="feature-content">
+              <div>
+                <h3>MathPaper</h3>
+                <p>基于 HTML / KaTeX 的仿高考数学试卷排版系统</p>
+              </div>
+              <span class="feature-tag">TYPESETTING</span>
+            </div>
+          </a>
+
+          <a
+            class="feature-card ringtone-card"
+            href="https://github.com/AFObject/RingtoneHY"
+            target="_blank"
+            rel="noreferrer"
+            data-reveal
+            aria-label="打开 RingtoneHY GitHub 仓库"
+          >
+            <div class="feature-topline">
+              <span class="project-number">C / 04</span>
+              <span class="status">PUBLIC · ARCHIVED ↗</span>
+            </div>
+            <div class="project-visual call-scene" aria-hidden="true">
+              <div class="ring ring-one"></div>
+              <div class="ring ring-two"></div>
+              <div class="ring ring-three"></div>
+              <div class="call-window">
+                <div class="window-bar"><i></i><i></i><i></i></div>
+                <div class="caller-icon">HY</div>
+                <strong>Online Class</strong>
+                <span>Incoming call…</span>
+                <div class="call-actions"><i>×</i><i>✓</i></div>
+              </div>
+            </div>
+            <div class="feature-content">
+              <div>
+                <h3>RingtoneHY</h3>
+                <p>Customizable macOS ringtone system for online classes.</p>
+              </div>
+              <span class="feature-tag">macOS · SWIFT</span>
+            </div>
+          </a>
+
+          <a
+            class="feature-card ide-card"
+            href="https://github.com/AFObject/Cppp-IDE"
+            target="_blank"
+            rel="noreferrer"
+            data-reveal
+            aria-label="打开 Cppp-IDE GitHub 仓库"
+          >
+            <div class="feature-topline">
+              <span class="project-number">D / 04</span>
+              <span class="status">PUBLIC · ARCHIVED ↗</span>
+            </div>
+            <div class="project-visual editor-scene" aria-hidden="true">
+              <div class="editor-tabs"><span>main.cpp</span><span>input.txt</span></div>
+              <div class="editor-body">
+                <div class="line-nums">1<br />2<br />3<br />4<br />5<br />6<br />7</div>
+                <pre><span class="code-blue">#include</span> <span class="code-green">&lt;iostream&gt;</span>
+
+<span class="code-pink">int</span> <span class="code-yellow">main</span>() {
+  std::cout <span class="code-pink">&lt;&lt;</span> <span class="code-green">"hello"</span>;
+  <span class="code-blue">return</span> <span class="code-orange">0</span>;
+}</pre>
+              </div>
+              <div class="editor-status"><span>✓ Build succeeded</span><span>C++ · UTF-8</span></div>
+            </div>
+            <div class="feature-content">
+              <div>
+                <h3>Cppp-IDE</h3>
+                <p>A lightweight C++ IDE for competitive programmers on macOS.</p>
+              </div>
+              <span class="feature-tag">macOS · SWIFT</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="legacy-projects" aria-labelledby="legacy-projects-title" hidden>
+        <div class="section-heading" data-reveal>
+          <div>
+            <span class="section-index">02 / PROJECT CONSTELLATION</span>
+            <h2 id="legacy-projects-title">项目星图</h2>
+          </div>
+          <p>不按时间，也不按名次。<br />每个项目都是对一个真实问题的回答。</p>
+        </div>
+
+        <div class="project-category" data-reveal>
+          <div class="category-label">
+            <span>01</span>
+            <h3>音乐工具</h3>
+            <i></i>
+          </div>
+          <div class="project-list">
+            <a class="project-row" href="https://github.com/AFObject/Chorder" target="_blank" rel="noreferrer">
+              <span class="row-icon note-icon">♮</span>
+              <span class="row-title">Chorder</span>
+              <span class="row-copy">连接 MIDI，实时显示和弦与五线谱</span>
+              <span class="row-meta">MIDI · MUSIC</span>
+              <span class="row-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-category" data-reveal>
+          <div class="category-label">
+            <span>02</span>
+            <h3>学习辅助</h3>
+            <i></i>
+          </div>
+          <div class="project-list">
+            <a class="project-row" href="https://github.com/AFObject/cizhou" target="_blank" rel="noreferrer">
+              <span class="row-icon">词</span>
+              <span class="row-title">cizhou</span>
+              <span class="row-copy">高中实词背诵（华二 616 版）Web 实用工具</span>
+              <span class="row-meta">WEB · LANGUAGE</span>
+              <span class="row-arrow">↗</span>
+            </a>
+            <a class="project-row" href="https://github.com/AFObject/Sheeter" target="_blank" rel="noreferrer">
+              <span class="row-icon">▦</span>
+              <span class="row-title">Sheeter</span>
+              <span class="row-copy">高效简洁的高考答题卡生成器</span>
+              <span class="row-meta">WEB · PRINT</span>
+              <span class="row-arrow">↗</span>
+            </a>
+            <a class="project-row" href="https://github.com/AFObject/Reciter" target="_blank" rel="noreferrer">
+              <span class="row-icon">诵</span>
+              <span class="row-title">Reciter</span>
+              <span class="row-copy">语文默写背诵小工具</span>
+              <span class="row-meta">WEB · LANGUAGE</span>
+              <span class="row-arrow">↗</span>
+            </a>
+            <a class="project-row" href="https://github.com/AFObject/PinHaoZi" target="_blank" rel="noreferrer">
+              <span class="row-icon">拼</span>
+              <span class="row-title">PinHaoZi</span>
+              <span class="row-copy">手写语文作业代写辅助工具</span>
+              <span class="row-meta">HTML · TOOL</span>
+              <span class="row-arrow">↗</span>
+            </a>
+            <a class="project-row" href="https://github.com/AFObject/Annotext" target="_blank" rel="noreferrer">
+              <span class="row-icon">注</span>
+              <span class="row-title">Annotext</span>
+              <span class="row-copy">文言文字词注释背诵小程序</span>
+              <span class="row-meta">WEB · LANGUAGE</span>
+              <span class="row-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-v2" id="research" aria-labelledby="research-v2-title">
+        <div class="research-v2-grid" aria-hidden="true"></div>
+        <header class="research-v2-head" data-reveal>
+          <div class="research-v2-meta">
+            <span>02 / RESEARCH</span>
+            <span>2023 — 2025</span>
+          </div>
+          <h2 id="research-v2-title">
+            From Classical Verse to Modern Song:
+            <span>Large Language Model–Driven Music Generation of Classical Chinese Poetry</span>
+          </h2>
+          <p>
+            This study applies large language models to generate songs that reimagine ancient Chinese poems in modern musical forms. By integrating symbolic music generation with classical literature education, the system enhances learning interest and reduces memorization burden. A fine-tuned SongComposer model and multidimensional evaluation grounded in music theory confirm its effectiveness, offering innovative tools for cultural preservation and educational practice.
+          </p>
+        </header>
+
+        <div class="research-lab" data-reveal>
+          <div class="research-pipeline" aria-label="Research process">
+            <button class="active" type="button" data-stage="curate" data-index="01" data-title="Curate" data-copy="Collect and preprocess symbolic music data aligned with poetic structure."><span>01</span>Curate</button>
+            <button type="button" data-stage="finetune" data-index="02" data-title="Fine-tune" data-copy="Adapt SongComposer to melody generation for Classical Chinese poetry."><span>02</span>Fine-tune</button>
+            <button type="button" data-stage="generate" data-index="03" data-title="Generate" data-copy="Map poetic semantics and form into controllable symbolic melodies."><span>03</span>Generate</button>
+            <button type="button" data-stage="evaluate" data-index="04" data-title="Evaluate" data-copy="Measure fluency, harmony, and stylistic fidelity through music theory."><span>04</span>Evaluate</button>
+          </div>
+
+          <div class="research-stage" data-stage-active="curate">
+            <div class="stage-visual" aria-hidden="true">
+              <div class="stage-scene scene-curate">
+                <div class="dataset-sheet"><span>POETRY / MIDI</span><strong>床前明月光</strong><i></i><i></i><i></i><i></i></div>
+                <div class="dataset-stack"><b>128</b><small>CURATED<br />SEQUENCES</small></div>
+              </div>
+              <div class="stage-scene scene-finetune">
+                <div class="model-core">Song<br />Composer</div>
+                <div class="model-nodes nodes-left"><i></i><i></i><i></i></div>
+                <div class="model-nodes nodes-right"><i></i><i></i><i></i></div>
+                <span class="loss-label">LOSS ↓ <span class="research-number">0.18</span></span>
+              </div>
+              <div class="stage-scene scene-generate">
+                <div class="poetry-input">春眠不觉晓</div>
+                <div class="generation-arrow">→</div>
+                <div class="piano-roll"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="stage-scene scene-evaluate">
+                <div class="metric"><span>HARMONY</span><strong>0.91</strong><i style="--score:91%"></i></div>
+                <div class="metric"><span>FLUENCY</span><strong>0.87</strong><i style="--score:87%"></i></div>
+                <div class="metric"><span>STYLE</span><strong>0.84</strong><i style="--score:84%"></i></div>
+              </div>
+            </div>
+            <div class="stage-copy">
+              <span class="stage-index">01 / 04</span>
+              <strong class="stage-title">Curate</strong>
+              <p class="stage-description">Collect and preprocess symbolic music data aligned with poetic structure.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-recognition" data-reveal>
+          <div><span>OUTCOMES</span><strong>2025</strong></div>
+          <p>第二十三届上海市青少年“明日科技之星”一等奖、“明日科技之星”称号、2025 年上海科普教育创新奖</p>
+          <p>2025 年上海中学科技周学术先锋课题评比活动一等奖、上海中学 2025 学年“五四表彰大会”金奖</p>
+        </div>
+
+        <div class="research-affiliation">Shanghai High School · Computer Science Research Group</div>
+      </section>
+
+      <section class="section research-section" id="legacy-research" aria-labelledby="research-title" hidden>
+        <div class="research-orbit orbit-one" aria-hidden="true"></div>
+        <div class="research-orbit orbit-two" aria-hidden="true"></div>
+
+        <div class="section-heading research-heading" data-reveal>
+          <div>
+            <span class="section-index">02 / RESEARCH</span>
+            <h2 id="research-title">Legacy Research</h2>
+          </div>
+          <div class="research-school">
+            <span>2025</span>
+            <p>上海市上海中学<br />2026 届科技工程班计算机课题组</p>
+          </div>
+        </div>
+
+        <div class="research-feature" data-reveal>
+          <div class="research-title-block">
+            <span class="label">RESEARCH PROJECT</span>
+            <h3>《基于大模型的<br />中国传统古诗文<br />歌曲生成研究》</h3>
+            <p>
+              探索语言模型如何理解古诗文的语义、韵律与情绪，并将传统文本映射为具有结构的音乐表达。
+            </p>
+          </div>
+
+          <div class="research-flow" aria-label="研究流程：文本理解、音乐结构、歌曲生成">
+            <div class="flow-node">
+              <span>01</span>
+              <strong>TEXT</strong>
+              <small>语义 · 韵律 · 意象</small>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-node">
+              <span>02</span>
+              <strong>STRUCTURE</strong>
+              <small>调式 · 和声 · 曲式</small>
+            </div>
+            <div class="flow-line"><i></i></div>
+            <div class="flow-node">
+              <span>03</span>
+              <strong>SONG</strong>
+              <small>旋律 · 编配 · 生成</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="awards awards-compact" data-reveal>
+          <div class="award-heading">
+            <span>RECOGNITION</span>
+            <p>研究成果 / 2025</p>
+          </div>
+          <div class="award-lines">
+            <p>第二十三届上海市青少年“明日科技之星”一等奖、“明日科技之星”称号、2025年上海科普教育创新奖</p>
+            <p>2025年上海中学科技周学术先锋课题评比活动一等奖、上海中学2025学年“五四表彰大会”金奖</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-title">
+        <div class="contact-signal" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="contact-copy" data-reveal>
+          <span class="section-index">03 / CONTACT</span>
+          <h2 id="contact-title">Let’s make<br />something <em>resonate.</em></h2>
+          <div class="contact-links">
+            <a href="mailto:yixuanzhu@sjtu.edu.cn">
+              <span>Email</span>
+              <strong>yixuanzhu@sjtu.edu.cn</strong>
+              <i>↗</i>
+            </a>
+            <a href="https://github.com/AFObject" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <strong>@AFObject</strong>
+              <i>↗</i>
+            </a>
+          </div>
+        </div>
+        <footer>
+          <span>YIXUAN ZHU © 2026</span>
+          <span>SHANGHAI · CHINA</span>
+          <a href="#top">BACK TO TOP ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

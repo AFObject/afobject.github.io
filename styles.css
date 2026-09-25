@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./fonts/Figtree-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./fonts/Figtree-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./fonts/Figtree-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./fonts/Figtree-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --bg: #f1f0eb;
@@ -21,9 +53,9 @@
   --research-muted: rgba(23, 18, 23, 0.58);
   --research-line: rgba(23, 18, 23, 0.16);
   --research-grid: rgba(23, 18, 23, 0.055);
-  --display: "Avenir Next", "Helvetica Neue", "SF Pro Display", Arial, sans-serif;
-  --body: "Avenir Next", "Helvetica Neue", "SF Pro Text", "PingFang SC", sans-serif;
-  --mono: "DM Mono", "SFMono-Regular", Consolas, monospace;
+  --display: "Figtree", "Avenir Next", "Helvetica Neue", "SF Pro Display", Arial, sans-serif;
+  --body: "Figtree", "Avenir Next", "Helvetica Neue", "SF Pro Text", "PingFang SC", sans-serif;
+  --mono: "Figtree", "DM Mono", "SFMono-Regular", Consolas, monospace;
 }
 
 html[data-theme="dark"] {
@@ -162,12 +194,12 @@ button {
   border: 1px solid var(--line-strong);
   border-radius: 50%;
   font: 500 0.63rem var(--mono);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .brand-copy {
   font: 600 0.71rem/1.18 var(--display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 
@@ -444,7 +476,7 @@ html[data-theme="light"] .theme-icon .sun {
 .hero-statement {
   margin: 0;
   font: 500 clamp(1.35rem, 2.6vw, 2.9rem)/1.15 var(--display);
-  letter-spacing: -0.045em;
+  letter-spacing: -0.03em;
 }
 
 .word-rotator {
@@ -570,7 +602,7 @@ html[data-theme="light"] .theme-icon .sun {
 .section-heading h2 {
   margin: 0;
   font: 500 clamp(3.3rem, 7vw, 7.4rem)/0.92 var(--display);
-  letter-spacing: -0.07em;
+  letter-spacing: -0.04em;
 }
 
 .section-heading > p {
@@ -667,7 +699,7 @@ a.feature-card:hover {
 .feature-content h3 {
   margin: 0 0 0.42rem;
   font: 500 clamp(2rem, 3vw, 3.1rem)/1 var(--display);
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
 }
 
 .feature-content p {
@@ -1322,7 +1354,7 @@ a.feature-card:hover {
 .research-title-block h3 {
   margin: 1.5rem 0;
   font: 500 clamp(1.8rem, 3.4vw, 3.7rem)/1.16 var(--display);
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
 }
 
 .research-title-block p {
@@ -1549,7 +1581,7 @@ a.feature-card:hover {
 
 .contact-links strong {
   font: 500 clamp(1.15rem, 2.2vw, 2.1rem) var(--display);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .contact-links i {
@@ -1613,7 +1645,7 @@ footer {
 .horizontal-top h2 {
   margin: 0;
   font: 500 clamp(2.3rem, 4.6vw, 5rem)/0.92 var(--display);
-  letter-spacing: -0.07em;
+  letter-spacing: -0.04em;
 }
 
 .horizontal-guide {
@@ -1878,7 +1910,7 @@ footer {
 .mini-card-copy h3 {
   margin: 0 0 0.45rem;
   font: 500 clamp(1.65rem, 2.5vw, 2.45rem)/1 var(--display);
-  letter-spacing: -0.055em;
+  letter-spacing: -0.03em;
 }
 
 .mini-card-copy p {
@@ -2250,7 +2282,7 @@ footer {
   margin: 0;
   max-width: 17ch;
   font: 500 clamp(2.4rem, 4.2vw, 4.7rem)/0.98 var(--display);
-  letter-spacing: -0.068em;
+  letter-spacing: -0.04em;
 }
 
 .research-v2 h2 span {
@@ -2262,7 +2294,7 @@ footer {
   color: transparent;
   font-size: 0.39em;
   line-height: 1.24;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
 }
 
 .research-v2-head > p {
@@ -2426,7 +2458,7 @@ footer {
 
 .dataset-stack b {
   font: 500 2.1rem/1 var(--display);
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
 }
 
 .dataset-stack small {
@@ -2681,7 +2713,7 @@ footer {
 .stage-title {
   margin: 0.7rem 0;
   font: 500 clamp(1.9rem, 3vw, 3.2rem)/1 var(--display);
-  letter-spacing: -0.055em;
+  letter-spacing: -0.03em;
 }
 
 .stage-description {
